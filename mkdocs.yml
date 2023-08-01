@@ -1,0 +1,92 @@
+site_name: autoims
+site_url: https://github.com/vandeplaslab/autoims-docs
+site_author: Lukasz Migas
+site_description: >-
+  Suite of tools for image registration and visualisation.
+  
+# Repository
+repo_name: vandeplaslab/autoims-docs
+repo_url: https://github.com/vandeplaslab/autoims-docs
+
+# Copyright
+copyright: Copyright &copy; 2023 - present Van de Plas lab
+extra_css:
+  - assets/css/extra.css
+
+theme:
+  name: material
+  logo: assets/icon.svg
+  favicon: assets/icon.svg
+  palette:
+    - scheme: default
+      primary: grey
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: amber
+      accent: yellow
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.top
+    - navigation.tabs
+    - search.highlight
+    - search.suggest
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - changelog
+  - attr_list
+  - md_in_html
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
+  - autorefs
+  - minify:
+      minify_html: true
+  - glightbox
+  - offline
+
+nav:
+  - Home: index.md
+  - Tasks: 
+    - User information: tasks/user.md
+    - Convert raw data: tasks/convert.md
+    - Tags and names: tasks/rename.md
+    - Mass alignment: tasks/mz_align.md
+    - Ion mobility alignment: tasks/im_align.md
+    - Normalization (single-dataset): tasks/normalization_single.md
+    - Normalization (multi-dataset): tasks/normalization_multi.md
+    - Average mass spectrum: tasks/mz_average_spectrum.md
+    - Average heatmap: tasks/average_heatmap.md
+    - Mass calibration: tasks/mz_calibrate.md
+    - Peak detection (single-dataset): tasks/mz_detect_single.md
+    - Peak detection (multi-dataset): tasks/mz_detect_multi.md
+    - Extract centroids: tasks/mz_extract_centroids.md
+    - Mass spectral QC: tasks/mz_quality_control.md
+    - Annotate spectra: tasks/mz_annotate.md
+    - Export annotation: tasks/export_annotate.md
+    - Compare m/z annotations: tasks/compare_mz_annotate.md
+    - Unsupervised training (single-dataset): tasks/unsupervised_single.md
+    - Unsupervised training (multi-dataset): tasks/unsupervised_multi.md
+    - Compare mosaics: tasks/compare_mosaic.md
+    - Compare peaks: tasks/compare_mz_peaks.md
+    - Compare spectra: tasks/compare_mz_spectra.md
+    - Export to imzML: tasks/export_imzml.md
+    - Export to OME-TIFF: tasks/export_ometiff.md
+    - Export to MATLAB CSV: tasks/export_fusion.md
+  - Requests/Bug reports: request.md
+  - Changelog: changelog.md

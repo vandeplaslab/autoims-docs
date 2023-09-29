@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/getting_started.html</loc>
+         <lastmod>2023-09-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/request.html</loc>
          <lastmod>2023-09-29</lastmod>
          <changefreq>daily</changefreq>

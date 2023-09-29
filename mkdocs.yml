@@ -88,5 +88,8 @@ nav:
     - Export to imzML: tasks/export_imzml.md
     - Export to OME-TIFF: tasks/export_ometiff.md
     - Export to MATLAB CSV: tasks/export_fusion.md
+  - Examples:
+    - Multi-dataset: examples/multi-dataset.md
+    - PASEF: examples/pasef.md
   - Requests/Bug reports: request.md
   - Changelog: changelog.md

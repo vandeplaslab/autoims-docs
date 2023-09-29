@@ -1,5 +1,7 @@
 # Feature Requests / Bug Reports
 
+## Feature requests
+
 You can request new features and report bugs in a couple of different ways.
 
 1. Send a request using the `Help > Send feedback or request...` menu option. This will open a popup window where you can provide more information. We are using [sentry.io](https://sentry.io/welcome/) under the hood.

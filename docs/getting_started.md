@@ -6,20 +6,37 @@ All data must live within the **DELFT** folder, and then within you own folder.
 
 ```
 DELFT
-|
 ├── lgmigas
-    |
-    ├── config.json
-    ├── extras
-    ├── raw
-    │   ├── dataset_1.d
-    │   ├── dataset_2.d
-    │   └── dataset_X.d
-    └── tags.csv
+    └── project-1
+        ├── config.json
+        ├── extras
+        │   └── masks
+        │       ├── dataset_1_mask.geojson
+        │       ├── dataset_1_registration.i2r.json
+        │       ├── dataset_2_mask.geojson
+        │       └── dataset_2_registration.i2r.json 
+        ├── raw
+        │   ├── dataset_1.d
+        │   ├── dataset_2.d
+        │   └── dataset_X.d
+        └── tags.csv
 ```
 
+### Meaning of each folder/file
 
-## Using Windows Explorer/Finder
+- The **DELFT** folder is divided based on user names so that everyone has their own space for experiments. 
+- Inside each **user folder**, you can create **projects** that would encompass different types of analyses.
+- In the **raw** folder, you can put your Bruker (.d) or Waters (.raw) datasets.
+- In the **extras** folder, you can provide additional files such as masks, databases, README, etc.
+- In the **extras/masks** folder, you can provide GeoJSON masks and i2r.json registration files (from image2image).
+- In the **extras/databases** folder, you can provide CSV files with database(s) to be used by annotine.
+- In the **extras/peaklists** folder, you can provide CSV peaklist files to be used in centroid data extraction.
+
+Inside each user folder, you should create **projects** that would encompass different types of analysis. 
+
+
+## Structuring your own data
+### Using Windows Explorer/Finder
 
 Here are some basic steps:
 1. Inside the **DELFT** folder, please create your directory (e.g. for me, this would be **lgmigas**).
@@ -28,7 +45,7 @@ Here are some basic steps:
 4. Then you can use the AutoIMS App to generate your configuration.
 
 
-## Using the app
+### Using the app
 
 1. Open the AutoIMS app.
 2. Click on the `Select project directory` button.

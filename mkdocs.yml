@@ -67,31 +67,35 @@ nav:
     - Glossary: tasks/glossary.md
     - User information: tasks/user.md
     - Pre-processing:
-      - Convert raw data: tasks/convert.md
-      - Tags and names (WIP): tasks/rename.md
-      - Mass alignment (WIP): tasks/mz_align.md
-      - Ion mobility alignment (WIP): tasks/im_align.md
-      - Normalization (single-dataset): tasks/normalization_single.md
-      - Normalization (multi-dataset): tasks/normalization_multi.md
-      - Average heatmap: tasks/average_heatmap.md
-      - Average mass spectrum: tasks/mz_average_spectrum.md
-      - Mass calibration: tasks/mz_calibrate.md
+      - Convert raw data: tasks/pre_convert.md
+      # - Tags and names (WIP): tasks/pre_rename.md
+      # - Mass alignment (WIP): tasks/pre_mz_align.md
+      # - Ion mobility alignment (WIP): tasks/pre_im_align.md
+      - Normalization (single-dataset): tasks/pre_normalization_single.md
+      - Normalization (multi-dataset): tasks/pre_normalization_multi.md
+      - Average heatmap: tasks/pre_average_heatmap.md
+      - Average mass spectrum: tasks/pre_average_spectrum.md
+      - Mass calibration: tasks/pre_mz_calibrate.md
     - Workflows:
-      - Peak detection (single-dataset) (WIP): tasks/mz_detect_single.md
-      - Peak detection (multi-dataset) (WIP): tasks/mz_detect_multi.md
-      - Extract centroids (WIP): tasks/mz_extract_centroids.md
-      - Mass spectral quality control (WIP): tasks/mz_quality_control.md
-      - Annotate spectra (WIP): tasks/mz_annotate.md
-      - Compare m/z annotations (WIP): tasks/compare_mz_annotate.md
-      - Unsupervised training (single-dataset) (WIP): tasks/unsupervised_single.md
-      - Unsupervised training (multi-dataset) (WIP): tasks/unsupervised_multi.md
-      - Compare mosaics (WIP): tasks/compare_mosaic.md
-      - Compare peaks (WIP): tasks/compare_mz_peaks.md
-      - Compare spectra (WIP): tasks/compare_mz_spectra.md
+      - Work in Progress: wip.md
+      # - Peak detection (single-dataset) (WIP): tasks/wf_mz_detect_single.md
+      # - Peak detection (multi-dataset) (WIP): tasks/wf_mz_detect_multi.md
+      # - 2D feature detection (single-dataset) (WIP): tasks/wf_im_detect_single.md
+      # - Extract centroids (WIP): tasks/wf_mz_extract_centroids.md
+      # - Mass spectral quality control (WIP): tasks/mz_quality_control.md
+      # - Annotate spectra (WIP): tasks/wf_mz_annotate.md
+      # - Unsupervised training (single-dataset) (WIP): tasks/wf_unsupervised_single.md
+      # - Unsupervised training (multi-dataset) (WIP): tasks/wf_unsupervised_multi.md
+      # - Compare mosaics (stitched) (WIP): tasks/wf_compare_mosaic.md
+      # - Compare peaks (interactive) (WIP): tasks/wf_compare_mz_peaks.md
+      # - Compare spectra (interactive) (WIP): tasks/wf_compare_mz_spectra_interactive.md
+      # - Compare spectra (grid) (WIP): tasks/wf_compare_mz_spectra_grid.md
     - Exports:
-      - Export to imzML (WIP): tasks/export_imzml.md
-      - Export to OME-TIFF (WIP): tasks/export_ometiff.md
-      - Export to MATLAB CSV (WIP): tasks/export_fusion.md
+      - Work in Progress: wip.md
+      # - Export average spectrum (WIP): tasks/ex_export_avg_spectrum.md
+      # - Export to imzML (WIP): tasks/ex_export_imzml.md
+      # - Export to OME-TIFF (WIP): tasks/ex_export_ometiff.md
+      # - Export to MATLAB CSV (WIP): tasks/ex_export_fusion.md
   - Examples:
     - Multi-dataset: examples/multi-dataset.md
     - PASEF: examples/pasef.md

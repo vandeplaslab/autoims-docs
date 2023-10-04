@@ -1,9 +1,9 @@
 # Normalization (single-dataset)
 
 ## Attributes
-* allowed to fail: false
-* multiple: false
-* dependecies: none
+* `allowed to fail`: `false`
+* `multiple`: `false`
+* `dependecies`: `none`
 
 ## Description
 
@@ -14,9 +14,8 @@ Because of this ambiguity, we don't apply single normalization on the entire dat
 This task doesn't let you make too many changes. You can only specify m/z values which can be helpful in normalizing your ion images to specific m/z (e.g. for quantitation).
 
 By default, we will always generate the following normalizations:
-* TIC
-* RMS
-* Median
+
+* TIC, RMS, Median
 * 5% TIC, 10% TIC (bottom 5 and 10% of intensities is cut-off)
 * 90% TIC, 95% TIC (top % and 10% of intensities is cut-off)
 * 5/10% TIC and 10/90% TIC (bottom 5/10% and top 5/10% of intensities are cut-off)

@@ -1,11 +1,11 @@
 # Pre. Average heatmap
 
 ## Attributes
-* allowed to fail: true
-* multiple: true
-* dependecies: 
-    - [Normalization (single-dataset)](normalization_single.md) - optional
-    - [Normalization (multi-dataset)](normalization_multi.md) - optional
+* `allowed to fail`: `true`
+* `multiple`: `true`
+* `dependecies`: 
+    - [Normalization (single-dataset)](pre_normalization_single.md) - optional
+    - [Normalization (multi-dataset)](pre_normalization_multi.md) - optional
 
 ## Description
 
@@ -18,4 +18,4 @@ The average heatmap will be based on the specified `proportion` (of pixels/frame
 
 We don't apply normalization on the entire dataset which means that we can (and should) apply normalizations on certain tasks, such as generating heatmaps. You can select normalization tag (source) and normalization name (e.g. TIC).
 
-See [single-dataset](normalization_single.md) or [multi-dataset](normalization_multi.md) normalization for more information.
+See [single-dataset](pre_normalization_single.md) or [multi-dataset](pre_normalization_multi.md) normalization for more information.

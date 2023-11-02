@@ -1,5 +1,14 @@
 # Getting started
 
+## App
+
+The `AutoIMS` app will generate configuration file which can be understood by our `AutoIMS-Runner` app in Delft.
+
+The `runner` app works by continuosly syncing data from Vanderbilt to Delft and executing executing tasks that have been specified by the user (e.g. you).
+The way you specify the tasks is very simple.
+You select your project (see below), select tasks from the `Available tasks` list, modify any parameters you wish to modify, add the task to the `Selected tasks` list and then click `Save configuration`.
+Once that is done, that configuration file alongside all the data is copied to Delft, and we run the workflow.
+
 ## Folder structure
 
 All data must live within the **DELFT** folder, and then within you own folder.

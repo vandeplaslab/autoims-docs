@@ -1,4 +1,4 @@
-# image2image-docs
+# autoims-docs
 
 Documentation for autoims app
 

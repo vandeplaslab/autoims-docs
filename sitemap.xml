@@ -2,182 +2,262 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/index.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/changelog.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/getting_started.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/request.html</loc>
-         <lastmod>2023-11-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/vandeplaslab/autoims-docs/wip.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/examples/multi-dataset.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/examples/pasef.html</loc>
-         <lastmod>2023-11-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/ex_export_avg_spectrum.html</loc>
-         <lastmod>2023-11-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/ex_export_fusion.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/ex_export_imzml.html</loc>
-         <lastmod>2023-11-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/ex_export_ometiff.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/glossary.html</loc>
-         <lastmod>2023-11-16</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/mz_quality_control.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/pre_average_heatmap.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/pre_average_spectrum.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/pre_convert.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/pre_geojson_registration.html</loc>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/pre_im_align.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/pre_image2image_registration.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/pre_merge_datasets.html</loc>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/pre_mz_align.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/pre_mz_calibrate.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/pre_normalization_multi.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/pre_normalization_project.html</loc>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/pre_normalization_single.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/pre_rename.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/user.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_centroids_ion_statistics.html</loc>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_compare_mosaic.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_compare_mz_peaks.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_compare_mz_spectra_grid.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_compare_mz_spectra_interactive.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_compare_mz_spectra_single_grid.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_compare_single_mosaic.html</loc>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_im_detect_single.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_mz_annotate.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_mask_heatmap_single.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_mask_spectrum_single.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_mz_annotate_multi.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_mz_annotate_project.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_mz_annotate_single.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_mz_annotate_subset.html</loc>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_mz_detect_multi.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_mz_detect_single.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_mz_extract_centroids.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_mz_extract_centroids_subset.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_mz_ion_statistics.html</loc>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_pasef_ms1.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_pasef_ms2.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_unsupervised_multi.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_qc_compute.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_qc_visualise_multi.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_qc_visualise_subset.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_supervised_project.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_supervised_single.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_supervised_spectrum_single.html</loc>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_unsupervised_project.html</loc>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_unsupervised_single.html</loc>
-         <lastmod>2023-11-16</lastmod>
+         <lastmod>2024-05-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/vandeplaslab/autoims-docs/tasks/wf_unsupervised_spectrum_single.html</loc>
+         <lastmod>2024-05-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

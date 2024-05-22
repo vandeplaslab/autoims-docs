@@ -1,14 +1,5 @@
 # Glossary and things to know
 
-## Task attributes
-
-Each task has a couple of attributes that determine how it operates in the `Autoims-Runner` app. Here is a summary of them:
-
-* `allowed to fail` - if set to `true`, the task will not stop the entire workflow if it fails. If set to `false`, the workflow will stop if this task fails.
-* `multiple` - if set to `true`, multiple instances of this task are permitted (each with different set of parameters). Presence of multiple versions will usually result in different set of results, depending on the parameters. If set to `false`, only one instance of this task is permitted.
-* `dependencies` - a list of tasks that this task depends on. If any of the dependencies fail, this task will not be executed. If all dependencies succeed, this task will be executed. If the list is empty, this task will be executed regardless of the status of other tasks. Some dependencies are `optional` and will only apply if certain parameters are specified.
-
-
 ## Frequent fields
 
 Some fields are used in multiple tasks. Here is a summary of them:

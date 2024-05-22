@@ -1,26 +1,37 @@
-# W: Compare spectra (interactive, multi-dataset)
+# W: Compute quality control metrics (multi-dataset)
 
 ## Brief description
-Generate HTML document comparing mass spectra across all datasets.
+Compute spatial quality control metrics such as ppm error, resolving power, TIC fluctuation, etc.
 
 ## Parameters
-| Field       | Type    | Description                        |
-|-------------|---------|------------------------------------|
-| m/zs        | array   | M/z values.                        |
-| Separate    | boolean | Separate spectra by dataset.       |
-| Normalize   | boolean | Normalize spectra.                 |
-| Split peaks | boolean | Split peaks into separate spectra. |
+| Field              | Type   | Description                         |
+|--------------------|--------|-------------------------------------|
+| Tag (identifier)   | string | Tag to use to help identify object. |
+| m/zs               | array  | M/z values.                         |
+| Peaklist           | string | Path to peaklist file.              |
+| Centroid tag       | string | Tag to use for the object.          |
+| Normalization tag  | string | Tag to use for normalization.       |
+| Normalization name | string | Name of the normalization.          |
 
 
 
 ## Dependencies (other tasks that this task might depend on)
-| Depends on                                                                                | Required/Optional   |
-|-------------------------------------------------------------------------------------------|---------------------|
-| [P: Average mass spectrum (single-dataset)](pre_average_spectrum.md)                      | required            |
-| [W: Average mass spectrum / mask (single-dataset)](wf_mask_spectrum_single.md)            | required            |
-| [W: Average mass spectrum / cluster (single-dataset)](wf_unsupervised_spectrum_single.md) | required            |
+| Depends on                                                                     | Required/Optional   |
+|--------------------------------------------------------------------------------|---------------------|
+| [W: Extract ion centroids (single/multi-dataset)](wf_mz_extract_centroids.md)  | required            |
+| [W: Extract ion centroids (subset-dataset)](wf_mz_extract_centroids_subset.md) | required            |
+| [P: Normalization (single-dataset)](pre_normalization_single.md)               | optional            |
+| [P: Normalization (multi-dataset)](pre_normalization_multi.md)                 | optional            |
+| [P: Normalization (merged-project)](pre_normalization_project.md)              | optional            |
+| [W: Feature detection (single-dataset)](wf_mz_detect_single.md)                | optional            |
+| [W: Feature detection (multi-dataset)](wf_mz_detect_multi.md)                  | optional            |
+| [W: Ion mobility feature detection (single-dataset)](wf_im_detect_single.md)   | optional            |
 
-
+## Dependents (tasks that might depend on this task)
+| Dependants                                                                         | Required/Optional   |
+|------------------------------------------------------------------------------------|---------------------|
+| [W: Visualise quality control metrics (subset-dataset)](wf_qc_visualise_subset.md) | required            |
+| [W: Visualise quality control metrics (multi-dataset)](wf_qc_visualise_multi.md)   | required            |
 
 ## Attributes
 | Attribute                         | Value   | Description                                                                                                                                                                                              |

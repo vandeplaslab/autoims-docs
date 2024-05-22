@@ -1,32 +1,31 @@
-# W: Compare spectra (interactive, multi-dataset)
+# P: Select datasets into a subset (subset-dataset)
 
 ## Brief description
-Generate HTML document comparing mass spectra across all datasets.
+Select datasets into a subset so certain analyses can be performed only on the specified set of datasets. Subsets are distinct from merged datasets and can be used in parallel with them.
 
 ## Parameters
-| Field       | Type    | Description                        |
-|-------------|---------|------------------------------------|
-| m/zs        | array   | M/z values.                        |
-| Separate    | boolean | Separate spectra by dataset.       |
-| Normalize   | boolean | Normalize spectra.                 |
-| Split peaks | boolean | Split peaks into separate spectra. |
+| Field              | Type   | Description                                  |
+|--------------------|--------|----------------------------------------------|
+| Subset of datasets | array  | Subset of datasets selected for annotation.. |
+| Subset name        | string | Name to be given to the subset of datasets.  |
 
 
 
-## Dependencies (other tasks that this task might depend on)
-| Depends on                                                                                | Required/Optional   |
-|-------------------------------------------------------------------------------------------|---------------------|
-| [P: Average mass spectrum (single-dataset)](pre_average_spectrum.md)                      | required            |
-| [W: Average mass spectrum / mask (single-dataset)](wf_mask_spectrum_single.md)            | required            |
-| [W: Average mass spectrum / cluster (single-dataset)](wf_unsupervised_spectrum_single.md) | required            |
 
 
+## Dependents (tasks that might depend on this task)
+| Dependants                                                                      | Required/Optional   |
+|---------------------------------------------------------------------------------|---------------------|
+| [P: Normalization (merged-project)](pre_normalization_project.md)               | required            |
+| [W: Supervised training (merged-project)](wf_supervised_project.md)             | required            |
+| [W: Unsupervised training (merged-project)](wf_unsupervised_project.md)         | required            |
+| [W: Annotate average mass spectrum (merged-project)](wf_mz_annotate_project.md) | required            |
 
 ## Attributes
 | Attribute                         | Value   | Description                                                                                                                                                                                              |
 |-----------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Multiple allowed                  | True    | Allow multiple instances of this task in a workflow.                                                                                                                                                     |
-| Task can fail                     | True    | Task is optional and can fail without causing the entire workflow to fail.                                                                                                                               |
+| Task can fail                     | False   | Task is optional and can fail without causing the entire workflow to fail.                                                                                                                               |
 | Step can fail                     | True    | Sub-tasks of this task can fail without causing the entire task (and workflow) to fail.                                                                                                                  |
 | Requires ion mobility             | False   | Task requires ion mobility data.                                                                                                                                                                         |
 | Task can fail (with ion mobility) | False   | This task uses ion mobility data but it is allowed to fail, without causing the entire workflow to fail.                                                                                                 |

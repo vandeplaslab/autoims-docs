@@ -1,27 +1,23 @@
-# W: Compare mosaic images (multi-dataset)
+# W: Compare mosaic images (single-dataset)
 
 ## Brief description
-Generate mosaic images for all datasets.
+Generate mosaic images for each dataset.
 
 ## Parameters
-| Field                          | Type    | Description                                                                          |
-|--------------------------------|---------|--------------------------------------------------------------------------------------|
-| Centroid tag                   | string  | Tag to use for the object.                                                           |
-| Normalization tag              | string  | Tag to use for normalization.                                                        |
-| Normalization name             | string  | Name of the normalization.                                                           |
-| Clip hotspots                  | boolean | Clip image intensities to increase image contrast.                                   |
-| Quantile                       | boolean | Use quantile normalization - only used if the `Normalization tag` is not specified.  |
-| Common intensity               | boolean | Use common intensity across multiple datasets.                                       |
-| Number of top                  | integer | Number of most intense features to use. If 'value=0' then all features will be used. |
-| One directory                  | boolean | Save all images in one directory.                                                    |
-| Merge by m/z                   | boolean | Mosaic of each m/z for all datasets should be created.                               |
-| Number of columns (by m/z)     | integer | Number of columns for m/z images.                                                    |
-| Merge by dataset               | boolean | Mosaic of images of each dataset should be created.                                  |
-| Number of columns (by dataset) | integer | Number of columns for dataset images.                                                |
-| Colorbar                       | boolean | Add colorbar to the image.                                                           |
-| Auto-rotate images             | boolean | Automatically rotate images that are taller than they are wider.                     |
-| Colormap                       | string  | Colormap to use for the image.                                                       |
-| DPI                            | integer | DPI of the image.                                                                    |
+| Field              | Type    | Description                                                                          |
+|--------------------|---------|--------------------------------------------------------------------------------------|
+| Centroid tag       | string  | Tag to use for the object.                                                           |
+| Normalization tag  | string  | Tag to use for normalization.                                                        |
+| Normalization name | string  | Name of the normalization.                                                           |
+| Clip hotspots      | boolean | Clip image intensities to increase image contrast.                                   |
+| Quantile           | boolean | Use quantile normalization - only used if the `Normalization tag` is not specified.  |
+| Number of top      | integer | Number of most intense features to use. If 'value=0' then all features will be used. |
+| Number of columns. | integer | Number of columns for m/z images.                                                    |
+| Number of rows.    | integer | Number of columns for m/z images.                                                    |
+| Auto-rotate images | boolean | Automatically rotate images that are taller than they are wider.                     |
+| Colorbar           | boolean | Add colorbar to the image.                                                           |
+| Colormap           | string  | Colormap to use for the image.                                                       |
+| DPI                | integer | DPI of the image.                                                                    |
 
 
 

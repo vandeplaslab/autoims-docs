@@ -1,26 +1,28 @@
-# W: Compare spectra (interactive, multi-dataset)
+# W: Average ion mobility heatmap / mask (single-dataset)
 
 ## Brief description
-Generate HTML document comparing mass spectra across all datasets.
+Generate average ion mobility heatmap per mask (this task will also automatically generate an average mass spectrum)
 
 ## Parameters
-| Field       | Type    | Description                        |
-|-------------|---------|------------------------------------|
-| m/zs        | array   | M/z values.                        |
-| Separate    | boolean | Separate spectra by dataset.       |
-| Normalize   | boolean | Normalize spectra.                 |
-| Split peaks | boolean | Split peaks into separate spectra. |
+| Field              | Type   | Description                                           |
+|--------------------|--------|-------------------------------------------------------|
+| Mask tag           | array  | Tag or name of the mask to be used as the input mask. |
+| Normalization tag  | string | Tag to use for normalization.                         |
+| Normalization name | string | Name of the normalization.                            |
 
 
 
 ## Dependencies (other tasks that this task might depend on)
-| Depends on                                                                                | Required/Optional   |
-|-------------------------------------------------------------------------------------------|---------------------|
-| [P: Average mass spectrum (single-dataset)](pre_average_spectrum.md)                      | required            |
-| [W: Average mass spectrum / mask (single-dataset)](wf_mask_spectrum_single.md)            | required            |
-| [W: Average mass spectrum / cluster (single-dataset)](wf_unsupervised_spectrum_single.md) | required            |
+| Depends on                                                        | Required/Optional   |
+|-------------------------------------------------------------------|---------------------|
+| [P: Normalization (single-dataset)](pre_normalization_single.md)  | optional            |
+| [P: Normalization (multi-dataset)](pre_normalization_multi.md)    | optional            |
+| [P: Normalization (merged-project)](pre_normalization_project.md) | optional            |
 
-
+## Dependents (tasks that might depend on this task)
+| Dependants                                                                   | Required/Optional   |
+|------------------------------------------------------------------------------|---------------------|
+| [W: Ion mobility feature detection (single-dataset)](wf_im_detect_single.md) | required            |
 
 ## Attributes
 | Attribute                         | Value   | Description                                                                                                                                                                                              |

@@ -1,24 +1,26 @@
-# W: Compare spectra (interactive, multi-dataset)
+# W: Average mass spectrum / class (single-dataset)
 
 ## Brief description
-Generate HTML document comparing mass spectra across all datasets.
+Generate average mass spectrum per train class.
 
 ## Parameters
-| Field       | Type    | Description                        |
-|-------------|---------|------------------------------------|
-| m/zs        | array   | M/z values.                        |
-| Separate    | boolean | Separate spectra by dataset.       |
-| Normalize   | boolean | Normalize spectra.                 |
-| Split peaks | boolean | Split peaks into separate spectra. |
+| Field                   | Type    | Description                                                                    |
+|-------------------------|---------|--------------------------------------------------------------------------------|
+| Tag (identifier)        | string  | Tag to use to help identify object.                                            |
+| Supervised tag          | array   | Tag of the supervised/classification object when extracting the mass spectrum. |
+| Normalization tag       | string  | Tag to use for normalization.                                                  |
+| Normalization name      | string  | Name of the normalization.                                                     |
+| Output format           | array   | Format to use for the output file.                                             |
+| Export average spectrum | boolean | Export average spectrum - by default, we export summed mass spectrum.          |
 
 
 
 ## Dependencies (other tasks that this task might depend on)
-| Depends on                                                                                | Required/Optional   |
-|-------------------------------------------------------------------------------------------|---------------------|
-| [P: Average mass spectrum (single-dataset)](pre_average_spectrum.md)                      | required            |
-| [W: Average mass spectrum / mask (single-dataset)](wf_mask_spectrum_single.md)            | required            |
-| [W: Average mass spectrum / cluster (single-dataset)](wf_unsupervised_spectrum_single.md) | required            |
+| Depends on                                                        | Required/Optional   |
+|-------------------------------------------------------------------|---------------------|
+| [P: Normalization (single-dataset)](pre_normalization_single.md)  | optional            |
+| [P: Normalization (multi-dataset)](pre_normalization_multi.md)    | optional            |
+| [P: Normalization (merged-project)](pre_normalization_project.md) | optional            |
 
 
 
@@ -26,7 +28,7 @@ Generate HTML document comparing mass spectra across all datasets.
 | Attribute                         | Value   | Description                                                                                                                                                                                              |
 |-----------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Multiple allowed                  | True    | Allow multiple instances of this task in a workflow.                                                                                                                                                     |
-| Task can fail                     | True    | Task is optional and can fail without causing the entire workflow to fail.                                                                                                                               |
+| Task can fail                     | False   | Task is optional and can fail without causing the entire workflow to fail.                                                                                                                               |
 | Step can fail                     | True    | Sub-tasks of this task can fail without causing the entire task (and workflow) to fail.                                                                                                                  |
 | Requires ion mobility             | False   | Task requires ion mobility data.                                                                                                                                                                         |
 | Task can fail (with ion mobility) | False   | This task uses ion mobility data but it is allowed to fail, without causing the entire workflow to fail.                                                                                                 |

@@ -1,4 +1,4 @@
-# W: Extract ion centroids (single/multi-dataset)
+# W: Extract ion centroids (subset-dataset)
 
 ## Brief description
 Extract ion images. These images can be used in visualisation, unsupervised or supervised training.
@@ -6,6 +6,7 @@ Extract ion images. These images can be used in visualisation, unsupervised or s
 ## Parameters
 | Field                | Type    | Description                                                                                                                                                                       |
 |----------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Subset of datasets   | array   | Subset of datasets selected for annotation..                                                                                                                                      |
 | Tag (identifier)     | string  | Tag to use for the object.                                                                                                                                                        |
 | m/zs                 | array   | M/z values.                                                                                                                                                                       |
 | Peaklist             | string  | Path to peaklist file.                                                                                                                                                            |

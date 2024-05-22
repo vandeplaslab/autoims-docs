@@ -1,12 +1,13 @@
-# P: Normalization (multi-dataset)
+# P: Normalization (merged-project)
 
 ## Brief description
-Generates normalizations that can be used by other tasks. This task takes into account multiple datasets (e.g. ROIs or different files) and computes normalizations for each of them.
+Generates normalizations for a merged project. This task takes into account all datasets within a single merged project (e.g. ROIs or different files) and computes normalizations for each of them.
 
 ## Parameters
-| Field   | Type   | Description                                       |
-|---------|--------|---------------------------------------------------|
-| Tag     | string | Tag to be associated with the normalization data. |
+| Field        | Type   | Description                                       |
+|--------------|--------|---------------------------------------------------|
+| Project name | string | Name of the project.                              |
+| Tag          | string | Tag to be associated with the normalization data. |
 
 ## More Information
 We all know that normalization is important in IMS - it helps us remove technical variation, leads to more consistent analyses and improves the quality of our images. The problem, however, is which normalization should be used? We have TIC, RMS, 5/95% TIC, etc. 
@@ -24,9 +25,10 @@ By default, we will always generate the following normalizations:
 * any other normalizations specified by their m/z
 
 ## Dependencies (other tasks that this task might depend on)
-| Depends on                                                       | Required/Optional   |
-|------------------------------------------------------------------|---------------------|
-| [P: Normalization (single-dataset)](pre_normalization_single.md) | required            |
+| Depends on                                                                      | Required/Optional   |
+|---------------------------------------------------------------------------------|---------------------|
+| [P: Normalization (single-dataset)](pre_normalization_single.md)                | required            |
+| [P: Merge single-datasets into project (merged-dataset)](pre_merge_datasets.md) | required            |
 
 ## Dependents (tasks that might depend on this task)
 | Dependants                                                                                | Required/Optional   |
@@ -55,7 +57,7 @@ By default, we will always generate the following normalizations:
 ## Attributes
 | Attribute                         | Value   | Description                                                                                                                                                                                              |
 |-----------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Multiple allowed                  | False   | Allow multiple instances of this task in a workflow.                                                                                                                                                     |
+| Multiple allowed                  | True    | Allow multiple instances of this task in a workflow.                                                                                                                                                     |
 | Task can fail                     | False   | Task is optional and can fail without causing the entire workflow to fail.                                                                                                                               |
 | Step can fail                     | True    | Sub-tasks of this task can fail without causing the entire task (and workflow) to fail.                                                                                                                  |
 | Requires ion mobility             | False   | Task requires ion mobility data.                                                                                                                                                                         |

@@ -1,15 +1,17 @@
-# W: Compare spectra (interactive, multi-dataset)
+# W: Compare spectra (one-vs-one; single-dataset)
 
 ## Brief description
-Generate HTML document comparing mass spectra across all datasets.
+Compare mass spectra from within a single dataset.
 
 ## Parameters
-| Field       | Type    | Description                        |
-|-------------|---------|------------------------------------|
-| m/zs        | array   | M/z values.                        |
-| Separate    | boolean | Separate spectra by dataset.       |
-| Normalize   | boolean | Normalize spectra.                 |
-| Split peaks | boolean | Split peaks into separate spectra. |
+| Field         | Type    | Description                                    |
+|---------------|---------|------------------------------------------------|
+| m/z min       | number  | Minimum m/z.                                   |
+| m/z max       | number  | Maximum m/z.                                   |
+| Plot style    | array   | Style of the generated figures.                |
+| Color palette | string  | Color palette to use to colorize mass spectra. |
+| Line width    | number  | Line width.                                    |
+| DPI           | integer | DPI of the image.                              |
 
 
 

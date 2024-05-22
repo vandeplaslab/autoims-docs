@@ -1,12 +1,13 @@
-# W: Unsupervised training (single-dataset)
+# W: Unsupervised training (merged-project)
 
 ## Brief description
-Create unsupervised model and a set of figures.
+Create unsupervised model and suite of figures.
 
 ## Parameters
 | Field                                      | Type    | Description                                                                                                                                                                                     |
 |--------------------------------------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Tag (identifier)                           | string  | Tag to use to help identify object.                                                                                                                                                             |
+| Merged project                             | array   | Merged project to use for training. If not specified, all projects will be used.                                                                                                                |
 | Algorithm                                  | string  | Algorithm to use for training.                                                                                                                                                                  |
 | Centroid tag                               | string  | Tag to use for the object.                                                                                                                                                                      |
 | Normalization tag                          | string  | Tag to use for normalization.                                                                                                                                                                   |
@@ -19,6 +20,8 @@ Create unsupervised model and a set of figures.
 | Minimum distance [UMAP]                    | number  | Minimum distance to use for clustering.                                                                                                                                                         |
 | Perplexity [tSNE]                          | integer | Perplexity - balance between preserving the global and local structure of the data.                                                                                                             |
 | Exaggeration [tSNE]                        | number  | Exaggeration - used to increase the attractive forces between points.                                                                                                                           |
+| Inter-normalization                        | boolean | Inter-normalization.                                                                                                                                                                            |
+| Batch normalization                        | boolean | Batch normalization.                                                                                                                                                                            |
 | Auto-rotate images                         | boolean | Automatically rotate images that are taller than they are wider.                                                                                                                                |
 | Colormap                                   | string  | Colormap to use for the image.                                                                                                                                                                  |
 | Plot style                                 | array   | Style of the generated figures.                                                                                                                                                                 |
@@ -32,6 +35,7 @@ Create unsupervised model and a set of figures.
 |----------------------------------------------------------------------------------------|---------------------|
 | [W: Extract ion centroids (single/multi-dataset)](wf_mz_extract_centroids.md)          | required            |
 | [W: Extract ion centroids (subset-dataset)](wf_mz_extract_centroids_subset.md)         | required            |
+| [P: Merge single-datasets into project (merged-dataset)](pre_merge_datasets.md)        | required            |
 | [P: Normalization (single-dataset)](pre_normalization_single.md)                       | optional            |
 | [P: Normalization (multi-dataset)](pre_normalization_multi.md)                         | optional            |
 | [P: Normalization (merged-project)](pre_normalization_project.md)                      | optional            |

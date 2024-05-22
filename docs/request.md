@@ -13,5 +13,5 @@ You can request new features and report bugs in a couple of different ways.
 
 The app uses [sentry.io](https://sentry.io/welcome/) for automatic bug reports. This sends a HTML request with error tracebacks to sentry so that we can figure out what went wrong. You can disable this behaviour by using the `Help > Telemetry...` menu option and then selecting `No, I'd prefer not to send bug reports.`.
 
-!!! note Note
+!!! note "Note"
         While we try not to capture any personal information, this is not guaranteed and some information such as file paths might be sent to us. We don't use this information for anything other than figuring out where we have bugs and what causes the errors to happen.

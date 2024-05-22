@@ -1,27 +1,19 @@
-# P: Average mass spectrum (single-dataset)
+# W: Average mass spectrum / cluster (single-dataset)
 
 ## Brief description
-Generate average mass spectrum based on fraction of the pixels.
+Generate average mass spectrum per K-Means cluster.
 
 ## Parameters
-| Field                   | Type    | Description                                                                                              |
-|-------------------------|---------|----------------------------------------------------------------------------------------------------------|
-| Proportion              | number  | Proportion of pixels to use for the task.                                                                |
-| Normalization tag       | string  | Tag to use for normalization.                                                                            |
-| Normalization name      | string  | Name of the normalization.                                                                               |
-| Filename                | string  | Filename to use for the object. This can be very helpful when you want to e.g. compare or export spectra |
-| Output format           | array   | Format to use for the output file.                                                                       |
-| Export average spectrum | boolean | Export average spectrum - by default, we export summed mass spectrum.                                    |
+| Field                   | Type    | Description                                                                  |
+|-------------------------|---------|------------------------------------------------------------------------------|
+| Tag (identifier)        | string  | Tag to use to help identify object.                                          |
+| Unsupervised tag        | array   | Tag of the unsupervised/clustering object when extracting the mass spectrum. |
+| Normalization tag       | string  | Tag to use for normalization.                                                |
+| Normalization name      | string  | Name of the normalization.                                                   |
+| Output format           | array   | Format to use for the output file.                                           |
+| Export average spectrum | boolean | Export average spectrum - by default, we export summed mass spectrum.        |
 
-## More Information
-This task will extract average mass spectrum for each dataset in the dataset folder.
 
-The average spectrum will be based on the specified `proportion` (of pixels/frames) of the dataset. 
-
-* If the value is equal to `1.0`, then all pixels will be used for this task. 
-* If this value is less than `1.0`, e.g. `0.5` then 50% of all pixels will be used. The 50% is selected evenly throughout the dataset.
-
-We don't apply normalization on the entire dataset which means that we can (and should) apply normalizations on certain tasks, such as generating heatmaps. You can select normalization tag (source) and normalization name (e.g. TIC).
 
 ## Dependencies (other tasks that this task might depend on)
 | Depends on                                                        | Required/Optional   |

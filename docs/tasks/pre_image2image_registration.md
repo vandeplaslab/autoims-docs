@@ -1,31 +1,26 @@
-# W: Compare spectra (interactive, multi-dataset)
+# P: Register image2image HDF5 masks (single-dataset)
 
 ## Brief description
-Generate HTML document comparing mass spectra across all datasets.
-
-## Parameters
-| Field       | Type    | Description                        |
-|-------------|---------|------------------------------------|
-| m/zs        | array   | M/z values.                        |
-| Separate    | boolean | Separate spectra by dataset.       |
-| Normalize   | boolean | Normalize spectra.                 |
-| Split peaks | boolean | Split peaks into separate spectra. |
+Register HDF5 masks from image2image. These masks can be used to extract average mass spectra, ion mobility heatmaps or in supervised training. Name you masks appropriately as the name will be used as the class name.
 
 
 
-## Dependencies (other tasks that this task might depend on)
-| Depends on                                                                                | Required/Optional   |
-|-------------------------------------------------------------------------------------------|---------------------|
-| [P: Average mass spectrum (single-dataset)](pre_average_spectrum.md)                      | required            |
-| [W: Average mass spectrum / mask (single-dataset)](wf_mask_spectrum_single.md)            | required            |
-| [W: Average mass spectrum / cluster (single-dataset)](wf_unsupervised_spectrum_single.md) | required            |
 
 
+
+
+## Dependents (tasks that might depend on this task)
+| Dependants                                                              | Required/Optional   |
+|-------------------------------------------------------------------------|---------------------|
+| [W: Supervised training (single-dataset)](wf_supervised_single.md)      | required            |
+| [W: Supervised training (merged-project)](wf_supervised_project.md)     | required            |
+| [W: Unsupervised training (single-dataset)](wf_unsupervised_single.md)  | optional            |
+| [W: Unsupervised training (merged-project)](wf_unsupervised_project.md) | optional            |
 
 ## Attributes
 | Attribute                         | Value   | Description                                                                                                                                                                                              |
 |-----------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Multiple allowed                  | True    | Allow multiple instances of this task in a workflow.                                                                                                                                                     |
+| Multiple allowed                  | False   | Allow multiple instances of this task in a workflow.                                                                                                                                                     |
 | Task can fail                     | True    | Task is optional and can fail without causing the entire workflow to fail.                                                                                                                               |
 | Step can fail                     | True    | Sub-tasks of this task can fail without causing the entire task (and workflow) to fail.                                                                                                                  |
 | Requires ion mobility             | False   | Task requires ion mobility data.                                                                                                                                                                         |

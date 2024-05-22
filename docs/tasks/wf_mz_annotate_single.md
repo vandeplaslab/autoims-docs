@@ -1,20 +1,28 @@
-# W: Feature detection (single-dataset)
+# W: Annotate mass spectra (single-dataset)
 
 ## Brief description
-Detect peaks in mass spectra of each dataset separately. Each dataset will have different set of peaks which cannot be compared.
+Annotate selected mass spectra within a single dataset. These could be mass spectra from different masks, clustering results, or all of the above etc. Action will be performed on each processed dataset individually.
 
 ## Parameters
-| Field                | Type    | Description                                                                      |
-|----------------------|---------|----------------------------------------------------------------------------------|
-| Spectrum source      | string  | Source of the mass spectra.                                                      |
-| Method               | string  | Peak picking method.                                                             |
-| SNR                  | number  | Signal-to-noise.                                                                 |
-| Threshold            | number  | Threshold for peak detection.                                                    |
-| m/z min              | number  | Minimum m/z.                                                                     |
-| m/z max              | number  | Maximum m/z.                                                                     |
-| Max. number of peaks | integer | Maximum number of peaks to detect. If 'value=0' then all peaks will be detected. |
-| Deisotope            | boolean | Deisotope spectra.                                                               |
-| Filename             | string  | Filename to use for the object.                                                  |
+| Field                  | Type    | Description                                                                                      |
+|------------------------|---------|--------------------------------------------------------------------------------------------------|
+| Spectrum source        | string  | Source of the mass spectra.                                                                      |
+| Molecule type          | string  | Molecule type to annotate.                                                                       |
+| Database               | array   | Database to use for annotation.                                                                  |
+| Adducts                | array   | Adducts to use for annotation.                                                                   |
+| PPM limit              | number  | PPM limit for annotation.                                                                        |
+| m/z min                | number  | Minimum m/z to annotate.                                                                         |
+| m/z max                | number  | Maximum m/z to annotate.                                                                         |
+| Min. peaks             | integer | Minimum number of peaks.                                                                         |
+| SNR                    | number  | Signal-to-noise ratio.                                                                           |
+| Deisotope              | boolean | Deisotope spectra.                                                                               |
+| Number of decoys       | integer | Number of decoys to use for FDR estimation.                                                      |
+| FDR mode               | string  | FDR mode to use for annotation.                                                                  |
+| Fill missing values    | boolean | When doing multi-dataset annotations, check for missing values in case SNR was too strict.       |
+| Enable filtering rules | boolean | Enable filtering rules that remove unlikely lipid classes or lipid+adduct combinations.          |
+| Resolution             | integer | Resolution of the data - this setting might change how we generate theoretical isotope patterns. |
+| Filename               | string  | Filename to use for the object.                                                                  |
+| Plot style             | array   | Style of the generated figures.                                                                  |
 
 
 
@@ -25,13 +33,7 @@ Detect peaks in mass spectra of each dataset separately. Each dataset will have 
 | [W: Average mass spectrum / mask (single-dataset)](wf_mask_spectrum_single.md)            | required            |
 | [W: Average mass spectrum / cluster (single-dataset)](wf_unsupervised_spectrum_single.md) | required            |
 
-## Dependents (tasks that might depend on this task)
-| Dependants                                                                     | Required/Optional   |
-|--------------------------------------------------------------------------------|---------------------|
-| [W: Extract ion centroids (single/multi-dataset)](wf_mz_extract_centroids.md)  | optional            |
-| [W: Extract ion centroids (subset-dataset)](wf_mz_extract_centroids_subset.md) | optional            |
-| [W: Compute quality control metrics (multi-dataset)](wf_qc_compute.md)         | optional            |
-| [W: Peak ion statistics (multi-dataset)](wf_mz_ion_statistics.md)              | optional            |
+
 
 ## Attributes
 | Attribute                         | Value   | Description                                                                                                                                                                                              |

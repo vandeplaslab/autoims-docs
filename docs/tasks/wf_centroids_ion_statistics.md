@@ -1,27 +1,20 @@
-# W: Compare mosaic images (multi-dataset)
+# W: Centroid ion statistics (multi-dataset)
 
 ## Brief description
-Generate mosaic images for all datasets.
+Compute ion statistics such as p- and q-values, volcano plots, and many other metrics across groups. This will calculate 'group' statistics to give you an idea of 'significant' features across conditions.
 
 ## Parameters
-| Field                          | Type    | Description                                                                          |
-|--------------------------------|---------|--------------------------------------------------------------------------------------|
-| Centroid tag                   | string  | Tag to use for the object.                                                           |
-| Normalization tag              | string  | Tag to use for normalization.                                                        |
-| Normalization name             | string  | Name of the normalization.                                                           |
-| Clip hotspots                  | boolean | Clip image intensities to increase image contrast.                                   |
-| Quantile                       | boolean | Use quantile normalization - only used if the `Normalization tag` is not specified.  |
-| Common intensity               | boolean | Use common intensity across multiple datasets.                                       |
-| Number of top                  | integer | Number of most intense features to use. If 'value=0' then all features will be used. |
-| One directory                  | boolean | Save all images in one directory.                                                    |
-| Merge by m/z                   | boolean | Mosaic of each m/z for all datasets should be created.                               |
-| Number of columns (by m/z)     | integer | Number of columns for m/z images.                                                    |
-| Merge by dataset               | boolean | Mosaic of images of each dataset should be created.                                  |
-| Number of columns (by dataset) | integer | Number of columns for dataset images.                                                |
-| Colorbar                       | boolean | Add colorbar to the image.                                                           |
-| Auto-rotate images             | boolean | Automatically rotate images that are taller than they are wider.                     |
-| Colormap                       | string  | Colormap to use for the image.                                                       |
-| DPI                            | integer | DPI of the image.                                                                    |
+| Field                       | Type    | Description                                                                                                                        |
+|-----------------------------|---------|------------------------------------------------------------------------------------------------------------------------------------|
+| Tag (identifier)            | string  | Tag to use to help identify object.                                                                                                |
+| Centroid tag                | string  | Tag to use for the object.                                                                                                         |
+| Normalization tag           | string  | Tag to use for normalization.                                                                                                      |
+| Normalization name          | string  | Name of the normalization.                                                                                                         |
+| Number of bootstrap samples | integer | Number of bootstrap samples to use for p-value estimation.                                                                         |
+| Export as PDF               | boolean | Export figures as PDF instead of PNG. This is useful if you don't want to generate 10s-100s figures and trying to save some space. |
+| Plot style                  | array   | Style of the generated figures.                                                                                                    |
+| Reduce method               | string  | Method to use for reducing the statistics.                                                                                         |
+| Reduce method               | string  | Method to use for reducing the statistics.                                                                                         |
 
 
 

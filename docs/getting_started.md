@@ -62,3 +62,13 @@ Here are some basic steps:
 4. Create your new project folder (e.g. **kidney_matrix_pos**) as above.
 5. Click on the `Create template directory...` button.
 6. TA-DA! The folder was pre-populated with a few files.
+
+
+### Refeence Project
+
+AutoIMS permits creating `links` to other projects which enable reusing of already existing data and potentially creating new
+visualisations or analyses. This can be very useful when working on a long-spanning project where data is continuously acquired,
+however, certain analyses can be performed on the incomplete data (e.g. HuBMAP or KPMP).
+
+There are some limitations to what tasks can be performed on the `reference` projects. Essentially, none of the pre-processing
+tasks will be executed (e.g. data conversion, m/z or IM alignment, m/z calibration) but many others are permitted.

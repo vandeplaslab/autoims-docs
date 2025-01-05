@@ -1,5 +1,36 @@
 # Changelog
 
+## ;;VERv0.2.1;;
+* ;;change;; Slight changes to the UI
+* ;;change;; Improved messages for reference datasets
+* ;;fix;; Fixed catastrophic issue with app throwing errors in the mass-spectra and heatmap tasks
+
+
+## ;;VERv0.2.0;;
+* ;;new;; Complete revamp of the user interface, making it easier to edit tasks.
+* ;;new;; Added Add reference project…` and Remove reference project… options to allow creation of ‘multi-project’ projects when dealing with a lot of data.
+* ;;new;; Added `P: Create a merged project from a select single-datasets (merged-project) task, which will create a merged dataset based on your selection.
+* ;;new;; Added P: Skyline mass spectrum (single-dataset) task, which will create a skyline mass spectrum (instead of average) - this can be used in any other task that uses mass spectra.
+* ;;new;; Added Filter ion centroids (single-/multi-dataset), which will help reduce the number of isotopic ions from your peaklists.
+* ;;new;; Added W: XGBoost training (single/merged-project) task, which is a more specialized supervised classification workflow that does multi-iteration training + SHAP.
+* ;;new;; Added W: Annotate average mass spectrum (merged-project) task, which will provide annotations for the average mass spectrum of each dataset in a merged project.
+* ;;new;; Added P: Normalization (merged-project) task, which will provide normalizations based on a subset of datasets.
+* ;;new;; Added m/zs (must be used in calibration) to the calibration task. This will ensure that the RANSAC model used during calibration ‘overfits’ on the specified m/z. It is very useful when an internal standard or lockmass is used.
+* ;;new;; Enabled automatic SNR detection for all Annotation tasks. This is based on a simple knee rule where we try to find optimal SNR based on the number of peaks detected. When knee is detected, SNR is assumed to be optimal.
+* ;;new;; Added Enable filtering rules to all Annotation tasks. This will enable rules defined by Maddie.
+* ;;new;; Added Group statistics of mass spectra and Group statistics of ion centroids which will enable generation of dataset or mask distribution plots.
+* ;;new;; Added a Creating/Editing field to the statusbar to indicate which action is taking place.
+* ;;new;; When opening a project, the retrieval of metadata information is performed in another thread, so it should no longer block the UI.
+* ;;new;; There is now an option to disable instance validation, which substantially speeds up task addition. Tasks are always validated during export.
+* ;;change;; Added a few extra adducts to the Annotation adduct selection (M+Ag, M+Li, M+H-H2O).
+* ;;change;; The Quality control task has now been separated into W: Compute quality control metrics and W: Visualise quality control metrics to reduce the amount of data duplication.
+* ;;change;; Separated export of the mass spectrum to a separate task due to a design flaw (stupidly, mass spectra were exported before calibration, which is not particularly helpful). If you want to have mass spectrum, please add E: Export mass spectrum task to the queue.
+* ;;change;; Tasks are no longer appended to the end of the queue but rather inserted in the appropriate location according to their priority (execution order).
+* ;;change;; Many of the tasks now have improved defaults.
+* ;;fix;; Many small bugs.
+* ;;fix;; Even more big bugs.
+* ;;fix;; Filtering of tasks is better now. (edited) 
+
 ## ;;VERv0.1.11;;
 * ;;new;; When creating `tags.csv` file and a file already exists, you will be asked to confirm if it should be overwritten. If so, a backup will be created.
 * ;;new;; Improved validation of `P: Register GeoJSON masks from QuPath`

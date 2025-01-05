@@ -50,8 +50,8 @@ markdown_extensions:
   - pymdownx.keys
   - tables
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -63,61 +63,87 @@ plugins:
       minify_html: true
   - glightbox
   - offline
+  - exclude:
+      glob:
+        - _templates/*
 
 nav:
   - Home: index.md
   - Getting started: getting_started.md
   - Tasks: 
-    - Glossary: tasks/glossary.md
-    - User information: tasks/user.md
+    - Glossary: extras/glossary.md
+    - Metadata: extras/metadata.md
+    - Reference project: extras/reference-project.md
+    - Contact:
+        - Contact information: tasks/user.md
     - Pre-processing:
         - Convert raw data (single-dataset): tasks/pre_convert.md
         - Tags and names (single-dataset): tasks/pre_rename.md
-        - Ion mobility alignment (single-dataset): tasks/pre_im_align.md
         - Mass alignment (single-dataset): tasks/pre_mz_align.md
+        - Ion mobility alignment (single-dataset): tasks/pre_im_align.md
+        - Register GeoJSON masks from QuPath (single-dataset): tasks/pre_geojson_registration.md
+        - Register image2image HDF5 masks (single-dataset): tasks/pre_image2image_registration.md
+        - Create merged project based on tags (merged-dataset): tasks/pre_merge_datasets.md
+        - Create merged project from select single-datasets (merged-dataset): tasks/pre_merge_subset_datasets.md
+        - Create subset project from single-datasets (subset-project): tasks/pre_subset_datasets.md
         - Normalization (single-dataset): tasks/pre_normalization_single.md
         - Normalization (multi-dataset): tasks/pre_normalization_multi.md
         - Normalization (merged-project): tasks/pre_normalization_project.md
-        - Average mass spectrum (single-dataset): tasks/pre_average_spectrum.md
         - Average ion mobility heatmap (single-dataset): tasks/pre_average_heatmap.md
+        - Average mass spectrum (single-dataset): tasks/pre_average_spectrum.md
+        - Skyline mass spectrum (single-dataset): tasks/pre_skyline_spectrum.md
+        - Average ion mobility heatmap / mask (single-dataset): tasks/wf_mask_heatmap_single.md
+        - Average mass spectrum / mask (single-dataset): tasks/wf_mask_spectrum_single.md
+        - Skyline mass spectrum / mask (single-dataset): tasks/wf_mask_skyline_spectrum_single.md
         - Mass calibration (single-dataset): tasks/pre_mz_calibrate.md
-        - Register GeoJSON masks from QuPath (single-dataset): tasks/pre_geojson_registration.md
-        - Register image2image HDF5 masks (single-dataset): tasks/pre_image2image_registration.md
-        - Merge single-datasets into project (merged-dataset): tasks/pre_merge_datasets.md
-        - Select datasets into a subset (subset-dataset): tasks/pre_merge_datasets.md
-    - Workflows:
-        - Feature detection (single-dataset): tasks/wf_mz_detect_single.md
-        - Feature detection (multi-dataset): tasks/wf_mz_detect_multi.md
+    - Features:
+        - M/z feature detection (multi-dataset): tasks/wf_mz_detect_multi.md
+        - M/z feature detection (subset-project): tasks/wf_mz_detect_subset.md
+        - M/z feature detection (single-dataset): tasks/wf_mz_detect_single.md
         - Ion mobility feature detection (single-dataset): tasks/wf_im_detect_single.md
         - Extract ion centroids (single/multi-dataset): tasks/wf_mz_extract_centroids.md
-        - Extract ion centroids (subset-dataset): tasks/wf_mz_extract_centroids_subset.md
-        - Compute quality control metrics (multi-dataset): tasks/wf_qc_compute.md
-        - Visualise quality control metrics (multi-dataset): tasks/wf_qc_visualise_multi.md
-        - Visualise quality control metrics (subset-dataset): tasks/wf_qc_visualise_subset.md
+        - Extract ion centroids (subset-project): tasks/wf_mz_extract_centroids_subset.md
+        - Filter ion centroids (single-dataset): tasks/wf_mz_filter_single_centroids.md
+        - Filter ion centroids (multi-dataset): tasks/wf_mz_filter_multi_centroids.md
+    - Annotation:
+        - Annotate average mass spectrum (merged-project): tasks/wf_mz_annotate_project.md
         - Annotate mass spectra (single-dataset): tasks/wf_mz_annotate_single.md
         - Annotate mass spectrum (multi-dataset): tasks/wf_mz_annotate_multi.md
         - Annotate average mass spectrum (merged-project): tasks/wf_mz_annotate_project.md
-        - Annotate mass spectrum (subset-dataset): tasks/wf_mz_annotate_subset.md
+        - Annotate mass spectrum (subset-project): tasks/wf_mz_annotate_subset.md
+    - Machine Learning:
         - Unsupervised training (single-dataset): tasks/wf_unsupervised_single.md
         - Unsupervised training (merged-project): tasks/wf_unsupervised_project.md
         - Average mass spectrum / cluster (single-dataset): tasks/wf_unsupervised_spectrum_single.md
-        - Compare mosaic images (single-dataset): tasks/wf_compare_single_mosaic.md
-        - Compare mosaic images (multi-dataset): tasks/wf_compare_mosaic.md
-        - Compare spectra (interactive, multi-dataset): tasks/wf_compare_mz_spectra_interactive.md
-        - Compare peaks (interactive, multi-dataset): tasks/wf_compare_mz_peaks.md
-        - Average mass spectrum / mask (single-dataset): tasks/wf_mask_spectrum_single.md
-        - Average ion mobility heatmap / mask (single-dataset): tasks/wf_mask_heatmap_single.md
+        - XGBoost training (single-dataset): tasks/wf_xgboost_single.md
+        - XGBoost training (merged-project): tasks/wf_xgboost_project.md
         - Supervised training (single-dataset): tasks/wf_supervised_single.md
         - Supervised training (merged-project): tasks/wf_supervised_project.md
         - Average mass spectrum / class (single-dataset): tasks/wf_supervised_spectrum_single.md
-        - Process PASEF-MS1 imaging data (single-dataset): tasks/wf_pasef_ms1.md
-        - Process PASEF-MS2 imaging data (single-dataset): tasks/wf_pasef_ms2.md
+    - Statistics:
+        - Group statistics of ion centroids (multi-dataset): tasks/wf_centroids_ion_statistics.md
+        - Group statistics of mass spectra (multi-dataset): tasks/wf_mz_ion_statistics.md
+        - Distributions of ion centroids (single-dataset): tasks/wf_compare_single_distribution.md
+        - Distributions of ion centroids (multi-dataset): tasks/wf_compare_multi_distribution.md
+    - Quality Control:
+        - Compute quality control metrics (multi-dataset): tasks/wf_qc_compute.md
+        - Visualise quality control metrics (multi-dataset): tasks/wf_qc_visualise_multi.md
+        - Visualise quality control metrics (subset-project): tasks/wf_qc_visualise_subset.md
+    - Visualization:
+        - Compare peaks (interactive, multi-dataset): tasks/wf_compare_mz_peaks.md
+        - Compare spectra (interactive, multi-dataset): tasks/wf_compare_mz_spectra_interactive.md
+        - Compare mosaic images (single-dataset): tasks/wf_compare_single_mosaic.md
+        - Compare mosaic images (multi-dataset): tasks/wf_compare_mosaic.md
         - Compare spectra (one-vs-one; multi-dataset): tasks/wf_compare_mz_spectra_grid.md
         - Compare spectra (one-vs-one; single-dataset): tasks/wf_compare_mz_spectra_single_grid.md
-        - Centroid ion statistics (multi-dataset): tasks/wf_centroids_ion_statistics.md
-        - Peak ion statistics (multi-dataset): tasks/wf_mz_ion_statistics.md
     - Export:
         - Dataset to imzML (single-dataset): tasks/ex_export_imzml.md
+        - Export mass spectrum (single-dataset): tasks/ex_mass_spectrum.md
+        - Export ion centroids (single-dataset): tasks/ex_centroids.md
+    - Specialized Workflows:
+        - Create ratio images (single-dataset): tasks/wf_compare_single_ratio.md
+        - Process PASEF-MS1 imaging data (single-dataset): tasks/wf_pasef_ms1.md
+        - Process PASEF-MS2 imaging data (single-dataset): tasks/wf_pasef_ms2.md
   - Examples:
     - Multi-dataset: examples/multi-dataset.md
     - PASEF: examples/pasef.md

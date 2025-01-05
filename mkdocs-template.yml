@@ -1,0 +1,82 @@
+site_name: autoims
+site_url: https://github.com/vandeplaslab/autoims-docs
+site_author: Lukasz Migas
+site_description: >-
+  Suite of tools for image registration and visualisation.
+  
+# Repository
+repo_name: vandeplaslab/autoims-docs
+repo_url: https://github.com/vandeplaslab/autoims-docs
+
+# Copyright
+copyright: Copyright &copy; 2023 - present Van de Plas lab
+extra_css:
+  - assets/css/extra.css
+
+theme:
+  name: material
+  logo: assets/icon.svg
+  favicon: assets/icon.svg
+  palette:
+    - scheme: default
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.top
+    - navigation.tabs
+    - navigation.expand
+    - search.highlight
+    - search.suggest
+    - toc.integrate
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - changelog
+  - attr_list
+  - md_in_html
+  - pymdownx.keys
+  - tables
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
+  - autorefs
+  - minify:
+      minify_html: true
+  - glightbox
+  - offline
+  - exclude:
+      glob:
+        - _templates/*
+
+nav:
+  - Home: index.md
+  - Getting started: getting_started.md
+  - Tasks: 
+    - Glossary: extras/glossary.md
+    - Metadata: extras/metadata.md
+    - Reference project: extras/reference-project.md
+{{ TASKS_NAV }}
+  - Examples:
+    - Multi-dataset: examples/multi-dataset.md
+    - PASEF: examples/pasef.md
+  - Requests/Bug reports: request.md
+  - Changelog: changelog.md

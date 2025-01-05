@@ -4,12 +4,24 @@
 Generate average ion mobility heatmap based on fraction of the pixels (this task will also automatically generate an average mass spectrum).
 
 ## Parameters
-| Field              | Type   | Description                                                                                              |
-|--------------------|--------|----------------------------------------------------------------------------------------------------------|
-| Proportion         | number | Proportion of pixels to use for the task.                                                                |
-| Normalization tag  | string | Tag to use for normalization.                                                                            |
-| Normalization name | string | Name of the normalization.                                                                               |
-| Filename           | string | Filename to use for the object. This can be very helpful when you want to e.g. compare or export spectra |
+### **Filename** (`type` - string)
+
+Filename to use for the object. This can be very helpful when you want to e.g. compare or export spectra
+
+### **Proportion** (`type` - number)
+
+Proportion of pixels to use for the task.
+
+### **Normalization tag** (`type` - string)
+
+Tag to use for normalization.
+
+!!! help
+    Rather than applying a normalization to the entire dataset, we apply it as needed to each task at hand.<br> You can compare the effect normalization has on specific task by repeating it with different normalization.<br> In some cases, its advised to use 'multi-dataset' normalization, in particular when doing comparisons.
+### **Normalization name** (`type` - string)
+
+Name of the normalization.
+
 
 ## More Information
 This task will extract average ion mobility heatmap for each dataset in the dataset folder.
@@ -42,4 +54,3 @@ We don't apply normalization on the entire dataset which means that we can (and 
 | Requires ion mobility             | True    | Task requires ion mobility data.                                                                                                                                                                         |
 | Task can fail (with ion mobility) | True    | This task uses ion mobility data but it is allowed to fail, without causing the entire workflow to fail.                                                                                                 |
 | Allowed in reference dataset      | True    | Task is to be performed on a 'reference' dataset. This will allow for multiple analyses to be performed on the same dataset, without cluttering or duplicating certain tasks (**unused at the moment**). |
-| Allowed in grid of parameters     | False   | A grid of parameters can be created for this task, automatically resulting in multiple instances of the task (**unused at the moment**)                                                                  |

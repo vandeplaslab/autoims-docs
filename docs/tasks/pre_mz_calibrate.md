@@ -4,10 +4,20 @@
 Calibrate mass axis.
 
 ## Parameters
-| Field   | Type   | Description                                                                     |
-|---------|--------|---------------------------------------------------------------------------------|
-| m/zs    | array  | M/z values.                                                                     |
-| Method  | string | Method to use for calibration. 'regression' is much better than 'interpolation' |
+### **m/zs** (`type` - array)
+
+M/z values.
+
+### **m/zs (must be used during calibration)** (`type` - array)
+
+M/z values that must be selected in the RANSAC process - select m/zs that will ensure convergence of the calibration procedure.
+
+!!! help
+    We are using <b>RANSAC</b>(RANdom SAmple Consensus) algorithm to improve the mass calibration performance<br>which randomly samples the data and fits a model to the data. This is particularly useful when the data<br>is noisy or contains outliers. By specifying the <b>essential m/zs</b>, you can ensure that certain mass<br>ranges are always included in the calibration process.
+### **Method** (`type` - string)
+
+Method to use for calibration. 'regression' is much better than 'interpolation'
+
 
 ## More Information
 The mass calibration task is a critical step in the pre-processing of mass spectrometry imaging data. It ensures the accuracy and precision of mass measurements, which is essential for downstream analysis.
@@ -60,4 +70,3 @@ This plot shows you the effect the calibration had on your data. It will show a 
 | Requires ion mobility             | False   | Task requires ion mobility data.                                                                                                                                                                         |
 | Task can fail (with ion mobility) | False   | This task uses ion mobility data but it is allowed to fail, without causing the entire workflow to fail.                                                                                                 |
 | Allowed in reference dataset      | False   | Task is to be performed on a 'reference' dataset. This will allow for multiple analyses to be performed on the same dataset, without cluttering or duplicating certain tasks (**unused at the moment**). |
-| Allowed in grid of parameters     | False   | A grid of parameters can be created for this task, automatically resulting in multiple instances of the task (**unused at the moment**)                                                                  |

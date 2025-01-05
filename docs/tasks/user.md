@@ -4,11 +4,20 @@
 Please provide your name and email address information. This information might be used to send an automated email when the tasks have completed.
 
 ## Parameters
-| Field         | Type   | Description                |
-|---------------|--------|----------------------------|
-| User name     | string | Name of the user.          |
-| Slack User ID | string | Slack user ID of the user. |
-| User email    | string | Email of the user.         |
+### **User name** (`type` - string)
+
+Name of the user.
+
+### **Slack User ID** (`type` - string)
+
+Slack user ID of the user.
+
+!!! help
+    You can specify your Slack ID to receive notifications about the task in the Slack <b>#autoims-progress</b> channel.<br><br>Please take a look at the <a href='https://youtu.be/u1IhnRV2TwI?t=8'>video</a> to learn how to find your Slack ID.<br><br> or follow the instructions below:<br>1. Click on your name in the <b>Direct messages</b> section<br>2. Click on <b>your name</b> at the very top of the window<br>3. Click on the <b>View full profile</b> button<br>4. Your Slack ID can then be found by clicking on the three dots under the option <b>Copy member ID</b>.
+### **User email** (`type` - string)
+
+Email of the user.
+
 
 ## More Information
 
@@ -38,4 +47,3 @@ You will be notified in the `Team Spraggins` workspace, in the `#autoims-progres
 | Requires ion mobility             | False   | Task requires ion mobility data.                                                                                                                                                                         |
 | Task can fail (with ion mobility) | False   | This task uses ion mobility data but it is allowed to fail, without causing the entire workflow to fail.                                                                                                 |
 | Allowed in reference dataset      | True    | Task is to be performed on a 'reference' dataset. This will allow for multiple analyses to be performed on the same dataset, without cluttering or duplicating certain tasks (**unused at the moment**). |
-| Allowed in grid of parameters     | False   | A grid of parameters can be created for this task, automatically resulting in multiple instances of the task (**unused at the moment**)                                                                  |

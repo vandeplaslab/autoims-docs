@@ -1,20 +1,53 @@
-# W: Feature detection (single-dataset)
+# W: M/z feature detection (single-dataset)
 
 ## Brief description
 Detect peaks in mass spectra of each dataset separately. Each dataset will have different set of peaks which cannot be compared.
 
 ## Parameters
-| Field                | Type    | Description                                                                      |
-|----------------------|---------|----------------------------------------------------------------------------------|
-| Spectrum source      | string  | Source of the mass spectra.                                                      |
-| Method               | string  | Peak picking method.                                                             |
-| SNR                  | number  | Signal-to-noise.                                                                 |
-| Threshold            | number  | Threshold for peak detection.                                                    |
-| m/z min              | number  | Minimum m/z.                                                                     |
-| m/z max              | number  | Maximum m/z.                                                                     |
-| Max. number of peaks | integer | Maximum number of peaks to detect. If 'value=0' then all peaks will be detected. |
-| Deisotope            | boolean | Deisotope spectra.                                                               |
-| Filename             | string  | Filename to use for the object.                                                  |
+### **Spectrum source** (`type` - string)
+
+Source of the mass spectra.
+
+### **Method** (`type` - string)
+
+Peak picking method.
+
+### **m/z min** (`type` - number)
+
+Minimum m/z.
+
+### **m/z max** (`type` - number)
+
+Maximum m/z.
+
+### **Automatic SNR** (`type` - boolean)
+
+Automatically determine SNR value which will use knee-based method to estimate appropriate SNR. This will also override the 'Min. peaks' parameter.
+
+### **Centwave SNR** (`type` - boolean)
+
+Use the CentWave method to estimate SNR. This might produce fewer peaks but they should be of higher quality.
+
+### **SNR** (`type` - number)
+
+Signal-to-noise.
+
+### **Threshold** (`type` - number)
+
+Threshold for peak detection.
+
+### **Max. number of peaks** (`type` - integer)
+
+Maximum number of peaks to detect. If 'value=0' then all peaks will be detected.
+
+### **Deisotope** (`type` - boolean)
+
+Deisotope spectra.
+
+### **Filename** (`type` - string)
+
+Filename to use for the object.
+
 
 
 
@@ -29,9 +62,9 @@ Detect peaks in mass spectra of each dataset separately. Each dataset will have 
 | Dependants                                                                     | Required/Optional   |
 |--------------------------------------------------------------------------------|---------------------|
 | [W: Extract ion centroids (single/multi-dataset)](wf_mz_extract_centroids.md)  | optional            |
-| [W: Extract ion centroids (subset-dataset)](wf_mz_extract_centroids_subset.md) | optional            |
+| [W: Extract ion centroids (subset-project)](wf_mz_extract_centroids_subset.md) | optional            |
 | [W: Compute quality control metrics (multi-dataset)](wf_qc_compute.md)         | optional            |
-| [W: Peak ion statistics (multi-dataset)](wf_mz_ion_statistics.md)              | optional            |
+| [W: Group statistics of mass spectra (multi-dataset)](wf_mz_ion_statistics.md) | optional            |
 
 ## Attributes
 | Attribute                         | Value   | Description                                                                                                                                                                                              |
@@ -42,4 +75,3 @@ Detect peaks in mass spectra of each dataset separately. Each dataset will have 
 | Requires ion mobility             | False   | Task requires ion mobility data.                                                                                                                                                                         |
 | Task can fail (with ion mobility) | False   | This task uses ion mobility data but it is allowed to fail, without causing the entire workflow to fail.                                                                                                 |
 | Allowed in reference dataset      | True    | Task is to be performed on a 'reference' dataset. This will allow for multiple analyses to be performed on the same dataset, without cluttering or duplicating certain tasks (**unused at the moment**). |
-| Allowed in grid of parameters     | False   | A grid of parameters can be created for this task, automatically resulting in multiple instances of the task (**unused at the moment**)                                                                  |

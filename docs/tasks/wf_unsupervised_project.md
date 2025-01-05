@@ -4,29 +4,96 @@
 Create unsupervised model and suite of figures.
 
 ## Parameters
-| Field                                      | Type    | Description                                                                                                                                                                                     |
-|--------------------------------------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Tag (identifier)                           | string  | Tag to use to help identify object.                                                                                                                                                             |
-| Merged project                             | array   | Merged project to use for training. If not specified, all projects will be used.                                                                                                                |
-| Algorithm                                  | string  | Algorithm to use for training.                                                                                                                                                                  |
-| Centroid tag                               | string  | Tag to use for the object.                                                                                                                                                                      |
-| Normalization tag                          | string  | Tag to use for normalization.                                                                                                                                                                   |
-| Normalization name                         | string  | Name of the normalization.                                                                                                                                                                      |
-| Masks                                      | array   | Masks to use during training - this will exclude all pixels from outside of the area during the training process. If multiple masks are specified, they will be combined.                       |
-| Iterate over number of components/clusters | boolean | Test several number of clusters ranging from 3 to the value defined in the 'Number of components/clusters'.                                                                                     |
-| Number of components/clusters [all]        | integer | Number of components to use.  If the value is 0, number of components will be identical to the number of features. '0' can only be used for PCA and NMF. The other methods will raise an error. |
-| Distance metric [UMAP]                     | string  | Distance metric to use for clustering.                                                                                                                                                          |
-| Number of neighbors [UMAP]                 | integer | Number of neighbors to use for clustering.                                                                                                                                                      |
-| Minimum distance [UMAP]                    | number  | Minimum distance to use for clustering.                                                                                                                                                         |
-| Perplexity [tSNE]                          | integer | Perplexity - balance between preserving the global and local structure of the data.                                                                                                             |
-| Exaggeration [tSNE]                        | number  | Exaggeration - used to increase the attractive forces between points.                                                                                                                           |
-| Inter-normalization                        | boolean | Inter-normalization.                                                                                                                                                                            |
-| Batch normalization                        | boolean | Batch normalization.                                                                                                                                                                            |
-| Auto-rotate images                         | boolean | Automatically rotate images that are taller than they are wider.                                                                                                                                |
-| Colormap                                   | string  | Colormap to use for the image.                                                                                                                                                                  |
-| Plot style                                 | array   | Style of the generated figures.                                                                                                                                                                 |
-| DPI                                        | integer | DPI of the image.                                                                                                                                                                               |
-| Export to file                             | array   | Type of output of the centroid data                                                                                                                                                             |
+### **Tag (identifier)** (`type` - string)
+
+Tag to use to help identify object.
+
+### **Merged project** (`type` - array)
+
+Merged project to use for training. If not specified, all projects will be used.
+
+### **Algorithm** (`type` - string)
+
+Algorithm to use for training.
+
+### **Centroid tag** (`type` - string)
+
+Tag to use for the object.
+
+### **Normalization tag** (`type` - string)
+
+Tag to use for normalization.
+
+!!! help
+    Rather than applying a normalization to the entire dataset, we apply it as needed to each task at hand.<br> You can compare the effect normalization has on specific task by repeating it with different normalization.<br> In some cases, its advised to use 'multi-dataset' normalization, in particular when doing comparisons.
+### **Normalization name** (`type` - string)
+
+Name of the normalization.
+
+### **Masks** (`type` - array)
+
+Masks to use during training - this will exclude all pixels from outside of the area during the training process. If multiple masks are specified, they will be combined.
+
+### **Iterate over no. of components/clusters** (`type` - boolean)
+
+Test several number of clusters ranging from 3 to the value defined in the 'Number of components/clusters'.
+
+### **No. of components/clusters [all]** (`type` - integer)
+
+Number of components to use.  If the value is 0, number of components will be identical to the number of features. '0' can only be used for PCA and NMF. The other methods will raise an error.
+
+### **Distance metric [UMAP]** (`type` - string)
+
+Distance metric to use for clustering.
+
+### **No. of neighbors [UMAP]** (`type` - integer)
+
+Number of neighbors to use for clustering.
+
+### **Minimum distance [UMAP]** (`type` - number)
+
+Minimum distance to use for clustering.
+
+### **Perplexity [tSNE]** (`type` - integer)
+
+Perplexity - balance between preserving the global and local structure of the data.
+
+### **Exaggeration [tSNE]** (`type` - number)
+
+Exaggeration - used to increase the attractive forces between points.
+
+### **Inter-normalization** (`type` - boolean)
+
+Inter-normalization.
+
+### **Batch normalization** (`type` - boolean)
+
+Batch normalization.
+
+### **Colormap** (`type` - string)
+
+Colormap to use for the image.
+
+### **Plot style** (`type` - array)
+
+Style of the generated figures.
+
+### **DPI** (`type` - integer)
+
+DPI of the image.
+
+### **Auto-rotate images** (`type` - boolean)
+
+Automatically rotate images that are taller than they are wider.
+
+### **Export images as** (`type` - string)
+
+Export figures as image or within a single PDF or PowerPoint.
+
+### **Export to file** (`type` - array)
+
+Type of output of the unsupervised data
+
 
 
 
@@ -34,8 +101,8 @@ Create unsupervised model and suite of figures.
 | Depends on                                                                             | Required/Optional   |
 |----------------------------------------------------------------------------------------|---------------------|
 | [W: Extract ion centroids (single/multi-dataset)](wf_mz_extract_centroids.md)          | required            |
-| [W: Extract ion centroids (subset-dataset)](wf_mz_extract_centroids_subset.md)         | required            |
-| [P: Merge single-datasets into project (merged-dataset)](pre_merge_datasets.md)        | required            |
+| [W: Extract ion centroids (subset-project)](wf_mz_extract_centroids_subset.md)         | required            |
+| [P: Create merged project based on tags (merged-dataset)](pre_merge_datasets.md)       | required            |
 | [P: Normalization (single-dataset)](pre_normalization_single.md)                       | optional            |
 | [P: Normalization (multi-dataset)](pre_normalization_multi.md)                         | optional            |
 | [P: Normalization (merged-project)](pre_normalization_project.md)                      | optional            |
@@ -53,4 +120,3 @@ Create unsupervised model and suite of figures.
 | Requires ion mobility             | False   | Task requires ion mobility data.                                                                                                                                                                         |
 | Task can fail (with ion mobility) | False   | This task uses ion mobility data but it is allowed to fail, without causing the entire workflow to fail.                                                                                                 |
 | Allowed in reference dataset      | True    | Task is to be performed on a 'reference' dataset. This will allow for multiple analyses to be performed on the same dataset, without cluttering or duplicating certain tasks (**unused at the moment**). |
-| Allowed in grid of parameters     | True    | A grid of parameters can be created for this task, automatically resulting in multiple instances of the task (**unused at the moment**)                                                                  |

@@ -4,20 +4,58 @@
 Parse PASEF imaging data and export data.
 
 ## Parameters
-| Field                 | Type    | Description                                                                        |
-|-----------------------|---------|------------------------------------------------------------------------------------|
-| MS2 tag               | string  | Tag (glob pattern) to recognize the MS2 dataset(s) by.                             |
-| Normalization tag     | string  | Tag to use for normalization.                                                      |
-| Normalization name    | string  | Name of the normalization.                                                         |
-| MS/MS library         | array   | Library to find tentative matches.                                                 |
-| Sum no. frames        | integer | When generating 'heatmap' spectra, sum this many frames to generate mass spectrum. |
-| Peak picker           | string  | Peak picker to use.                                                                |
-| Auto SNR thresholding | boolean | Automatically determine signal-to-noise ratio for each target.                     |
-| SNR                   | number  | Signal-to-noise ratio.                                                             |
-| Min. intensity        | number  | Minimum intensity.                                                                 |
-| Plot style            | array   | Style of the generated figures.                                                    |
-| Colormap              | string  | Colormap to use for the image.                                                     |
-| DPI                   | integer | DPI of the image.                                                                  |
+### **MS2 tag** (`type` - string)
+
+Tag (glob pattern) to recognize the MS2 dataset(s) by.
+
+### **Normalization tag** (`type` - string)
+
+Tag to use for normalization.
+
+!!! help
+    Rather than applying a normalization to the entire dataset, we apply it as needed to each task at hand.<br> You can compare the effect normalization has on specific task by repeating it with different normalization.<br> In some cases, its advised to use 'multi-dataset' normalization, in particular when doing comparisons.
+### **Normalization name** (`type` - string)
+
+Name of the normalization.
+
+### **MS/MS library** (`type` - array)
+
+Library to find tentative matches.
+
+!!! help
+    PASEF library is either MSP or Parquet file. At the moment, we don't support user-provided libraries.<br><br>If you would like to use your own library, please get in touch with <a href='mailto:l.g.migas@tudelft.nl'>Lukasz</a> to discuss further.
+### **Sum no. frames** (`type` - integer)
+
+When generating 'heatmap' spectra, sum this many frames to generate mass spectrum.
+
+### **Peak picker** (`type` - string)
+
+Peak picker to use.
+
+### **Auto SNR thresholding** (`type` - boolean)
+
+Automatically determine signal-to-noise ratio for each target.
+
+### **SNR** (`type` - number)
+
+Signal-to-noise ratio.
+
+### **Min. intensity** (`type` - number)
+
+Minimum intensity.
+
+### **Plot style** (`type` - array)
+
+Style of the generated figures.
+
+### **Colormap** (`type` - string)
+
+Colormap to use for the image.
+
+### **DPI** (`type` - integer)
+
+DPI of the image.
+
 
 
 
@@ -39,4 +77,3 @@ Parse PASEF imaging data and export data.
 | Requires ion mobility             | False   | Task requires ion mobility data.                                                                                                                                                                         |
 | Task can fail (with ion mobility) | False   | This task uses ion mobility data but it is allowed to fail, without causing the entire workflow to fail.                                                                                                 |
 | Allowed in reference dataset      | True    | Task is to be performed on a 'reference' dataset. This will allow for multiple analyses to be performed on the same dataset, without cluttering or duplicating certain tasks (**unused at the moment**). |
-| Allowed in grid of parameters     | False   | A grid of parameters can be created for this task, automatically resulting in multiple instances of the task (**unused at the moment**)                                                                  |

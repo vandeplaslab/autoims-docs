@@ -1,16 +1,23 @@
 # W: Average mass spectrum / mask (single-dataset)
 
 ## Brief description
-Generate average mass spectrum per mask.
+Generate average mass spectrum per mask. Masks must be provided in the extra's sub-directory.
 
 ## Parameters
-| Field                   | Type    | Description                                                           |
-|-------------------------|---------|-----------------------------------------------------------------------|
-| Mask tag                | array   | Tag or name of the mask to be used as the input mask.                 |
-| Normalization tag       | string  | Tag to use for normalization.                                         |
-| Normalization name      | string  | Name of the normalization.                                            |
-| Output format           | array   | Format to use for the output file.                                    |
-| Export average spectrum | boolean | Export average spectrum - by default, we export summed mass spectrum. |
+### **Mask tag** (`type` - array)
+
+Tag or name of the mask to be used as the input mask.
+
+### **Normalization tag** (`type` - string)
+
+Tag to use for normalization.
+
+!!! help
+    Rather than applying a normalization to the entire dataset, we apply it as needed to each task at hand.<br> You can compare the effect normalization has on specific task by repeating it with different normalization.<br> In some cases, its advised to use 'multi-dataset' normalization, in particular when doing comparisons.
+### **Normalization name** (`type` - string)
+
+Name of the normalization.
+
 
 
 
@@ -25,8 +32,8 @@ Generate average mass spectrum per mask.
 | Dependants                                                                              | Required/Optional   |
 |-----------------------------------------------------------------------------------------|---------------------|
 | [P: Mass calibration (single-dataset)](pre_mz_calibrate.md)                             | required            |
-| [W: Feature detection (single-dataset)](wf_mz_detect_single.md)                         | required            |
-| [W: Feature detection (multi-dataset)](wf_mz_detect_multi.md)                           | required            |
+| [W: M/z feature detection (single-dataset)](wf_mz_detect_single.md)                     | required            |
+| [W: M/z feature detection (multi-dataset)](wf_mz_detect_multi.md)                       | required            |
 | [W: Compare spectra (interactive, multi-dataset)](wf_compare_mz_spectra_interactive.md) | required            |
 | [W: Compare spectra (one-vs-one; single-dataset)](wf_compare_mz_spectra_single_grid.md) | required            |
 | [W: Compare spectra (one-vs-one; multi-dataset)](wf_compare_mz_spectra_grid.md)         | required            |
@@ -43,4 +50,3 @@ Generate average mass spectrum per mask.
 | Requires ion mobility             | False   | Task requires ion mobility data.                                                                                                                                                                         |
 | Task can fail (with ion mobility) | False   | This task uses ion mobility data but it is allowed to fail, without causing the entire workflow to fail.                                                                                                 |
 | Allowed in reference dataset      | True    | Task is to be performed on a 'reference' dataset. This will allow for multiple analyses to be performed on the same dataset, without cluttering or duplicating certain tasks (**unused at the moment**). |
-| Allowed in grid of parameters     | False   | A grid of parameters can be created for this task, automatically resulting in multiple instances of the task (**unused at the moment**)                                                                  |

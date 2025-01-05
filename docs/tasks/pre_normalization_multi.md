@@ -4,9 +4,10 @@
 Generates normalizations that can be used by other tasks. This task takes into account multiple datasets (e.g. ROIs or different files) and computes normalizations for each of them.
 
 ## Parameters
-| Field   | Type   | Description                                       |
-|---------|--------|---------------------------------------------------|
-| Tag     | string | Tag to be associated with the normalization data. |
+### **Tag** (`type` - string)
+
+Tag to be associated with the normalization data.
+
 
 ## More Information
 We all know that normalization is important in IMS - it helps us remove technical variation, leads to more consistent analyses and improves the quality of our images. The problem, however, is which normalization should be used? We have TIC, RMS, 5/95% TIC, etc. 
@@ -38,14 +39,14 @@ By default, we will always generate the following normalizations:
 | [P: Average ion mobility heatmap (single-dataset)](pre_average_heatmap.md)                | optional            |
 | [W: Average ion mobility heatmap / mask (single-dataset)](wf_mask_heatmap_single.md)      | optional            |
 | [W: Extract ion centroids (single/multi-dataset)](wf_mz_extract_centroids.md)             | optional            |
-| [W: Extract ion centroids (subset-dataset)](wf_mz_extract_centroids_subset.md)            | optional            |
+| [W: Extract ion centroids (subset-project)](wf_mz_extract_centroids_subset.md)            | optional            |
 | [W: Unsupervised training (single-dataset)](wf_unsupervised_single.md)                    | optional            |
 | [W: Unsupervised training (merged-project)](wf_unsupervised_project.md)                   | optional            |
 | [W: Supervised training (single-dataset)](wf_supervised_single.md)                        | optional            |
 | [W: Supervised training (merged-project)](wf_supervised_project.md)                       | optional            |
 | [W: Compute quality control metrics (multi-dataset)](wf_qc_compute.md)                    | optional            |
-| [W: Peak ion statistics (multi-dataset)](wf_mz_ion_statistics.md)                         | optional            |
-| [W: Centroid ion statistics (multi-dataset)](wf_centroids_ion_statistics.md)              | optional            |
+| [W: Group statistics of mass spectra (multi-dataset)](wf_mz_ion_statistics.md)            | optional            |
+| [W: Group statistics of ion centroids (multi-dataset)](wf_centroids_ion_statistics.md)    | optional            |
 | [W: Compare mosaic images (single-dataset)](wf_compare_single_mosaic.md)                  | optional            |
 | [W: Compare mosaic images (multi-dataset)](wf_compare_mosaic.md)                          | optional            |
 | [E: Dataset to imzML (single-dataset)](ex_export_imzml.md)                                | optional            |
@@ -57,8 +58,7 @@ By default, we will always generate the following normalizations:
 |-----------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Multiple allowed                  | False   | Allow multiple instances of this task in a workflow.                                                                                                                                                     |
 | Task can fail                     | False   | Task is optional and can fail without causing the entire workflow to fail.                                                                                                                               |
-| Step can fail                     | True    | Sub-tasks of this task can fail without causing the entire task (and workflow) to fail.                                                                                                                  |
+| Step can fail                     | False   | Sub-tasks of this task can fail without causing the entire task (and workflow) to fail.                                                                                                                  |
 | Requires ion mobility             | False   | Task requires ion mobility data.                                                                                                                                                                         |
 | Task can fail (with ion mobility) | False   | This task uses ion mobility data but it is allowed to fail, without causing the entire workflow to fail.                                                                                                 |
 | Allowed in reference dataset      | True    | Task is to be performed on a 'reference' dataset. This will allow for multiple analyses to be performed on the same dataset, without cluttering or duplicating certain tasks (**unused at the moment**). |
-| Allowed in grid of parameters     | False   | A grid of parameters can be created for this task, automatically resulting in multiple instances of the task (**unused at the moment**)                                                                  |

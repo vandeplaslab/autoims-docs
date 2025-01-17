@@ -72,9 +72,7 @@ def update_mkdocs_nav() -> None:
         for v in value:
             out.append(f"        - {v}")
     out = "\n".join(out)
-    # (TEMPLATE_DIR / "nav-template.txt").write_text(out)
     MK_YML.write_text(MK_TEMPLATE_YML.read_text().replace("{{ TASKS_NAV }}", out))
-    print(out)
 
 
 def make_docs() -> None:

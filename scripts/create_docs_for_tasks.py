@@ -8,7 +8,7 @@ from pathlib import Path
 from tabulate import tabulate
 from tqdm import tqdm
 
-from autoims.config.tasks import (
+from autoims_core.config.tasks import (
     ALL_CONFIGS,
     OPTIONAL_DEPENDANTS_MAP,
     REQUIRED_DEPENDANTS_MAP,
